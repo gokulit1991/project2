@@ -1,0 +1,17 @@
+<div class="container" ng-controller="FriendController">
+
+<table class="table" align="center">
+	
+    <tr bgcolor="#E0FFFF">
+		<td colspan="3">Friend List</td>
+	</tr>
+	<tr ng-repeat="friend in showFriendList">
+		<td><img  src="http://localhost:8085/Project2Middleware/getImage/{{friend.friendloginname}}" class="img-circle"  width="40" height="40"></td>
+		<td ng-hide="friend.freindloginname==currentUser.loginname">{{friend.friendloginname}}</td>
+		<td><button class="btn btn-danger">Unfriend</button></td>
+	</tr>
+	
+</table>
+
+
+</div>

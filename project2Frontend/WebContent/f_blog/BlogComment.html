@@ -1,0 +1,11 @@
+<div class="container" ng-controller="BlogController">
+
+<button data-target="#{{blogInfo.blogId}}" class="btn btn-info" data-toggle="collapse">{{blogInfo}}</button>
+<div id="{{blogInfo.blogId}}" class="collapse">{{blogInfo.blogContent}}</div>
+<div ng-repeat="comment in blogCommentData">
+<div>{{comment.commentText}}-{{comment.loginname}}-{{comment.commentDate}}</div></div>
+<div>Comment <textarea ng-model="blogComment.commentText"></textarea>
+<button ng-click="insertComment()">Comment</button></div>
+
+
+</div>
